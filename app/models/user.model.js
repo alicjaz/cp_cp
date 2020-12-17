@@ -9,10 +9,11 @@ module.exports = mongoose => {
       roles: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Role"
+        ref: "role"
       }
     ]
     })
+
   const User = mongoose.model("user", schema);
   return User;
 };

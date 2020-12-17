@@ -59,12 +59,9 @@ export default class Login extends Component {
           window.location.reload();
         },
         error => {
+          debugger;
           const resMessage =
-            (error.response &&
-              error.response.data &&
-              error.response.data.message) ||
-            error.message ||
-            error.toString();
+          error.message
 
           this.setState({
             loading: false,
